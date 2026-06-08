@@ -1,0 +1,57 @@
+:root {
+  --cor-primaria: #141414;
+  --cor-primaria-hover: #2A2A2A;
+  --cor-acento: #C30000;
+  --cor-acento-hover: #9A0000;
+  --cor-acento-clara: #FDEAEA;
+  --cor-bg: #F5F5F3;
+  --cor-branco: #FFFFFF;
+  --cor-texto: #1A1A1A;
+  --cor-texto-secundario: #5A5A5A;
+  --cor-texto-claro: #999998;
+  --cor-borda: #E8E8E6;
+  --cor-footer: #490202;
+  --cor-footer-texto: rgba(255,255,255,0.7);
+  --cor-footer-link: rgba(255,255,255,0.6);
+  --cor-footer-icone: rgba(255,255,255,0.5);
+  --cor-footer-divider: rgba(255,255,255,0.08);
+  --cor-branco-translucido: rgba(255,255,255,0.1);
+  --sombra-card-hover: 0 8px 30px rgba(30, 58, 47, 0.12);
+  --sombra-card-elevado: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --fonte-titulo: 'Barlow Condensed', Arial Narrow, sans-serif;
+  --fonte-corpo: 'Outfit', system-ui, sans-serif;
+
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-base: 1rem;
+  --texto-lg: 1.125rem;
+  --texto-xl: 1.25rem;
+  --texto-2xl: 1.5rem;
+  --texto-3xl: 2rem;
+  --texto-4xl: 2.5rem;
+  --texto-5xl: 3.5rem;
+
+  --esp-xs: 0.5rem;
+  --esp-sm: 1rem;
+  --esp-md: 1.5rem;
+  --esp-lg: 3rem;
+  --esp-xl: 5rem;
+  --esp-2xl: 7.5rem;
+
+  --borda-raio: 3px;
+  --borda-raio-lg: 6px;
+  --sombra-card: 0 2px 20px rgba(0, 0, 0, 0.06);
+  --sombra-navbar-scrolled: 0 2px 20px rgba(0,0,0,0.2);
+  --sombra-dropdown: 0 8px 20px rgba(0,0,0,0.2);
+  --cor-branco-opa-08: rgba(255,255,255,0.08);
+  --cor-branco-opa-20: rgba(255,255,255,0.2);
+  --cor-branco-opa-40: rgba(255,255,255,0.4);
+  --cor-branco-opa-50: rgba(255,255,255,0.5);
+  --cor-branco-opa-75: rgba(255,255,255,0.75);
+  --cor-branco-opa-80: rgba(255,255,255,0.8);
+  --cor-primaria-opa-10: rgba(30, 58, 47, 0.1);
+  --cor-primaria-opa-08: rgba(30, 58, 47, 0.08);
+  --transicao: 0.25s ease;
+  --largura-max: 1200px;
+}

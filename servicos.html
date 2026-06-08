@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Título e descrição que aparecem no Google -->
+  <title>Serviços – AFL Contábil</title>
+  <meta name="description" content="Conheça os serviços contábeis da AFL: contabilidade empresarial, imposto de renda, departamento pessoal, planejamento tributário e consultoria financeira.">
+
+  <!-- Fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ===================================================
+       NAVBAR – Barra de navegação (fixa no topo)
+       =================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+
+      <!-- Logotipo -->
+      <a href="index.html" class="navbar-logo">
+        <span>AFL</span> Contábil
+      </a>
+
+      <!-- Links de navegação -->
+      <nav class="navbar-links" id="navbar-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html" class="ativo">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html">Contato</a>
+        <!-- Botão CTA visível dentro do menu mobile -->
+        <a href="contato.html" class="navbar-cta">Solicitar Orçamento</a>
+      </nav>
+
+      <!-- Botão CTA visível em desktop -->
+      <a href="contato.html" class="navbar-cta" id="navbar-cta-desktop">
+        Solicitar Orçamento
+      </a>
+
+      <!-- Botão hambúrguer (só aparece no mobile via CSS) -->
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ===================================================
+       HERO INTERNO – Nossos Serviços
+       =================================================== -->
+  <section class="hero-interno pagina-titulo">
+    <div class="container">
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Início</a></li>
+        <li>Serviços</li>
+      </ul>
+
+      <h1>Nossos Serviços</h1>
+      <p class="hero-descricao">
+        Soluções contábeis completas para sua empresa crescer com segurança fiscal e financeira.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       SERVIÇOS DETALHADOS – Blocos com links âncora
+       =================================================== -->
+  <section class="secao-servicos-detalhe" style="background-color: var(--cor-branco);">
+    <div class="container">
+
+      <div class="secao-header">
+        <span class="secao-rotulo">Serviços</span>
+        <h2 class="secao-titulo">O que a AFL oferece para sua empresa</h2>
+        <p class="secao-subtitulo">
+          Cada serviço foi desenvolvido para garantir segurança e eficiência nas rotinas financeiras.
+        </p>
+      </div>
+
+      <!-- Contabilidade Empresarial -->
+      <div class="sobre-grid" id="contabilidade">
+        <div class="sobre-imagem">
+          <div class="sobre-placeholder">
+            Foto da Contabilidade Empresarial
+          </div>
+        </div>
+        <div>
+          <span class="secao-rotulo">Contábil</span>
+          <h2 class="secao-titulo">Contabilidade Empresarial</h2>
+          <p>
+            Acompanhamos diariamente as movimentações da sua empresa, mantendo os registros contábeis em ordem e garantindo que todas as obrigações sejam cumpridas.
+          </p>
+          <ul>
+            <li>Escrituração contábil completa</li>
+            <li>Análise de balanço e relatórios gerenciais</li>
+            <li>Conciliação bancária e fiscal</li>
+            <li>Suporte em auditorias internas</li>
+          </ul>
+          <a href="contato.html" class="btn-primario">Solicitar Orçamento</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Imposto de Renda -->
+      <div class="sobre-grid" id="imposto-renda">
+        <div>
+          <span class="secao-rotulo">Tributário</span>
+          <h2 class="secao-titulo">Imposto de Renda (PF e PJ)</h2>
+          <p>
+            Orientamos os cálculos e entregas do Imposto de Renda para pessoas físicas e jurídicas, reduzindo riscos e aproveitando oportunidades legais.
+          </p>
+          <ul>
+            <li>Elaboração de declarações</li>
+            <li>Apuração de deduções e benefícios</li>
+            <li>Regularização de pendências</li>
+            <li>Assessoria em retenções e impostos</li>
+          </ul>
+          <a href="contato.html" class="btn-primario">Solicitar Orçamento</a>
+        </div>
+        <div class="sobre-imagem">
+          <div class="sobre-placeholder">
+            Foto do Imposto de Renda
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Abertura e Encerramento -->
+      <div class="sobre-grid" id="abertura">
+        <div class="sobre-imagem">
+          <div class="sobre-placeholder">
+            Foto de Abertura de Empresa
+          </div>
+        </div>
+        <div>
+          <span class="secao-rotulo">Corporativo</span>
+          <h2 class="secao-titulo">Abertura e Encerramento de Empresas</h2>
+          <p>
+            Ajudamos na constituição e no encerramento de empresas com suporte completo aos registros, contratos e formalidades exigidas em cada etapa.
+          </p>
+          <ul>
+            <li>Registro na Junta Comercial</li>
+            <li>Definição de regime tributário</li>
+            <li>Documentação societária</li>
+            <li>Encerramento e baixa fiscal</li>
+          </ul>
+          <a href="contato.html" class="btn-primario">Solicitar Orçamento</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Departamento Pessoal -->
+      <div class="sobre-grid" id="dp">
+        <div>
+          <span class="secao-rotulo">RH</span>
+          <h2 class="secao-titulo">Departamento Pessoal / Folha de Pagamento</h2>
+          <p>
+            Cuidamos da rotina de pessoal com pagamento de salários, encargos e obrigações trabalhistas, assegurando conformidade e eficiência operacional.
+          </p>
+          <ul>
+            <li>Processamento de folhas</li>
+            <li>Calculo de encargos trabalhistas</li>
+            <li>Gestão de admissões e rescisões</li>
+            <li>Obrigações ao eSocial</li>
+          </ul>
+          <a href="contato.html" class="btn-primario">Solicitar Orçamento</a>
+        </div>
+        <div class="sobre-imagem">
+          <div class="sobre-placeholder">
+            Foto de Departamento Pessoal
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Planejamento Tributário -->
+      <div class="sobre-grid" id="planejamento">
+        <div class="sobre-imagem">
+          <div class="sobre-placeholder">
+            Foto de Planejamento Tributário
+          </div>
+        </div>
+        <div>
+          <span class="secao-rotulo">Estratégia</span>
+          <h2 class="secao-titulo">Planejamento Tributário</h2>
+          <p>
+            Identificamos oportunidades legais para otimizar impostos e fortalecer a competitividade da sua empresa no mercado.
+          </p>
+          <ul>
+            <li>Análise de regimes tributários</li>
+            <li>Simulações fiscais</li>
+            <li>Elaboração de planejamentos</li>
+            <li>Monitoramento de mudanças legais</li>
+          </ul>
+          <a href="contato.html" class="btn-primario">Solicitar Orçamento</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <!-- Consultoria Financeira -->
+      <div class="sobre-grid" id="consultoria">
+        <div>
+          <span class="secao-rotulo">Consultoria</span>
+          <h2 class="secao-titulo">Consultoria Financeira</h2>
+          <p>
+            Oferecemos orientação estratégica para gerir melhor fluxo de caixa, investimentos e análise de resultados financeiros.
+          </p>
+          <ul>
+            <li>Análise de fluxo de caixa</li>
+            <li>Relatórios de desempenho</li>
+            <li>Assessoria em investimentos</li>
+            <li>Gestão de custos e despesas</li>
+          </ul>
+          <a href="contato.html" class="btn-primario">Solicitar Orçamento</a>
+        </div>
+        <div class="sobre-imagem">
+          <div class="sobre-placeholder">
+            Foto de Consultoria Financeira
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       CTA FINAL – Chamada forte para solicitar orçamento
+       =================================================== -->
+  <section class="secao-cta">
+    <div class="container">
+      <h2>Pronto para impulsionar a gestão financeira da sua empresa?</h2>
+      <p>
+        Fale com nossos especialistas e receba um plano de serviços sob medida para o seu negócio.
+      </p>
+      <div class="cta-botoes">
+        <a href="contato.html" class="btn-primario">Solicitar Orçamento Gratuito</a>
+        <a href="https://wa.me/5511900000000" class="btn-secundario-branco" target="_blank">
+          💬 Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       FOOTER – Rodapé com links e informações
+       =================================================== -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Coluna 1: Sobre a empresa -->
+        <div>
+          <a href="index.html" class="footer-logo"><span>AFL</span> Contábil</a>
+          <p class="footer-descricao">
+            Escritório de contabilidade comprometido em oferecer 
+            soluções completas e personalizadas para empresas e 
+            pessoas físicas.
+          </p>
+          <!-- Ícones de redes sociais (adicione os links reais) -->
+          <div class="footer-redes">
+            <a href="#" aria-label="Instagram" class="footer-social-link">📷</a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link">💼</a>
+            <a href="#" aria-label="WhatsApp" class="footer-social-link">💬</a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Links rápidos -->
+        <div class="footer-coluna">
+          <h4>Empresa</h4>
+          <nav class="footer-links">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="blog.html">Blog</a>
+            <a href="contato.html">Contato</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 3: Serviços -->
+        <div class="footer-coluna">
+          <h4>Serviços</h4>
+          <nav class="footer-links">
+            <a href="servicos.html#contabilidade">Contabilidade</a>
+            <a href="servicos.html#imposto-renda">Imposto de Renda</a>
+            <a href="servicos.html#abertura">Abertura de Empresa</a>
+            <a href="servicos.html#dp">Dep. Pessoal</a>
+            <a href="servicos.html#planejamento">Planej. Tributário</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 4: Contato -->
+        <div class="footer-coluna">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <!-- Substitua pelos dados reais da AFL -->
+            <a href="tel:+5511900000000">📞 (11) 9 0000-0000</a>
+            <a href="mailto:contato@aflcontabil.com.br">✉️ contato@aflcontabil.com.br</a>
+            <a href="#" class="footer-info-link">📍 São Paulo, SP</a>
+            <a href="#" class="footer-info-link">⏰ Seg–Sex: 9h às 18h</a>
+          </nav>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <span>© 2026 AFL – Accounting, Finances Lima. Todos os direitos reservados.</span>
+        <span>CNPJ: 00.000.000/0001-00</span><!-- Substitua pelo CNPJ real -->
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ===================================================
+       JAVASCRIPT – Funcionalidades interativas
+       =================================================== -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Título e descrição que aparecem no Google -->
+  <title>Contato & Orçamento – AFL Contábil</title>
+  <meta name="description" content="Fale com a AFL Contábil para solicitar orçamento ou tirar dúvidas sobre contabilidade, imposto de renda e serviços financeiros.">
+
+  <!-- Fontes do Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- ===================================================
+       NAVBAR – Barra de navegação (fixa no topo)
+       =================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+
+      <!-- Logotipo -->
+      <a href="index.html" class="navbar-logo">
+        <span>AFL</span> Contábil
+      </a>
+
+      <!-- Links de navegação -->
+      <nav class="navbar-links" id="navbar-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="contato.html" class="ativo">Contato</a>
+        <!-- Botão CTA visível dentro do menu mobile -->
+        <a href="contato.html" class="navbar-cta">Solicitar Orçamento</a>
+      </nav>
+
+      <!-- Botão CTA visível em desktop -->
+      <a href="contato.html" class="navbar-cta" id="navbar-cta-desktop">
+        Solicitar Orçamento
+      </a>
+
+      <!-- Botão hambúrguer (só aparece no mobile via CSS) -->
+      <button class="navbar-toggle" id="navbar-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ===================================================
+       HERO INTERNO – Fale com a AFL
+       =================================================== -->
+  <section class="hero-interno pagina-titulo">
+    <div class="container">
+
+      <ul class="breadcrumb">
+        <li><a href="index.html">Início</a></li>
+        <li>Contato</li>
+      </ul>
+
+      <h1>Fale com a AFL</h1>
+      <p class="hero-descricao">
+        Responderemos em até 1 dia útil.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       SEÇÃO DE CONTATO – Formulário e informações
+       =================================================== -->
+  <section class="secao-contato" style="background-color: var(--cor-bg); padding-block: 80px;">
+    <div class="container" style="display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: start;">
+
+      <div class="contato-form">
+        <span class="secao-rotulo">Contato</span>
+        <h2 class="secao-titulo">Solicite um orçamento ou tire suas dúvidas</h2>
+
+        <form action="https://formspree.io/f/SUBSTITUIR_AQUI" method="POST" id="form-contato">
+          <div class="mensagem-sucesso" style="display: none; background-color: #FDEAEA; border-left: 3px solid #C30000; padding: 16px; margin-bottom: 16px; color: var(--cor-texto);">
+            ✓ Mensagem enviada com sucesso! Retornaremos em breve.
+          </div>
+          <input type="text" name="nome" placeholder="Nome completo" required style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
+          <input type="email" name="email" placeholder="E-mail" required style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
+          <input type="tel" name="telefone" placeholder="Telefone/WhatsApp" style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
+          <input type="text" name="empresa" placeholder="Empresa" style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
+          <select name="servico" style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
+            <option value="Contabilidade Empresarial">Contabilidade Empresarial</option>
+            <option value="Imposto de Renda PF">Imposto de Renda PF</option>
+            <option value="Imposto de Renda PJ">Imposto de Renda PJ</option>
+            <option value="Abertura de Empresa">Abertura de Empresa</option>
+            <option value="Dep. Pessoal">Dep. Pessoal</option>
+            <option value="Planejamento Tributário">Planejamento Tributário</option>
+            <option value="Consultoria Financeira">Consultoria Financeira</option>
+            <option value="Outro">Outro</option>
+          </select>
+          <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" required style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;"></textarea>
+          <button type="submit" class="btn-primario" style="width: 100%;">Enviar Mensagem</button>
+        </form>
+      </div>
+
+      <aside class="contato-info" style="display: grid; gap: var(--esp-md);">
+        <h3 style="font-family: var(--fonte-titulo);">Outras formas de contato</h3>
+
+        <div class="card-base" style="padding: var(--esp-md);">
+          <p style="font-weight: 600; margin-bottom: 0.5rem;">Telefone</p>
+          <p>(11) 9 0000-0000</p>
+        </div>
+
+        <div class="card-base" style="padding: var(--esp-md);">
+          <p style="font-weight: 600; margin-bottom: 0.5rem;">WhatsApp</p>
+          <p><a href="https://wa.me/5511900000000">(11) 9 0000-0000</a></p>
+        </div>
+
+        <div class="card-base" style="padding: var(--esp-md);">
+          <p style="font-weight: 600; margin-bottom: 0.5rem;">E-mail</p>
+          <p>contato@aflcontabil.com.br</p>
+        </div>
+
+        <div class="card-base" style="padding: var(--esp-md);">
+          <p style="font-weight: 600; margin-bottom: 0.5rem;">Endereço</p>
+          <p>São Paulo, SP</p>
+        </div>
+
+        <div class="card-base" style="padding: var(--esp-md);">
+          <p style="font-weight: 600; margin-bottom: 0.5rem;">Horário</p>
+          <p>Segunda a Sexta, 9h às 18h</p>
+        </div>
+
+        <a href="https://wa.me/5511900000000" class="btn-primario" style="background-color: #25D366; border-radius: 3px; color: #FFFFFF; text-align: center; display: inline-block;">💬 Chamar no WhatsApp</a>
+
+        <div style="background-color: #E8E8E6; border-radius: 3px; height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--esp-md);">
+          Google Maps será adicionado aqui
+        </div>
+      </aside>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       FAQ – Perguntas frequentes
+       =================================================== -->
+  <section class="secao-faq" style="background-color: var(--cor-branco); padding-block: var(--esp-xl);">
+    <div class="container">
+      <span class="secao-rotulo">FAQ</span>
+      <h2 class="secao-titulo">Perguntas Frequentes</h2>
+
+      <div style="display: grid; gap: var(--esp-md); margin-top: var(--esp-lg);">
+        <details>
+          <summary>Quanto custa o serviço de contabilidade?</summary>
+          <p>O custo depende do porte da empresa, volume de operações e serviços contratados. Podemos apresentar uma proposta personalizada após análise do seu caso.</p>
+        </details>
+
+        <details>
+          <summary>Vocês atendem MEI e empresas de todos os portes?</summary>
+          <p>Sim, atendemos MEI, micro, pequenas, médias e grandes empresas, oferecendo serviços ajustados à complexidade e ao porte de cada cliente.</p>
+        </details>
+
+        <details>
+          <summary>Como funciona o processo de abertura de empresa?</summary>
+          <p>Iniciamos com a definição do tipo societário e regime tributário, depois cuidamos do registro na Junta Comercial e das demais formalidades legais.</p>
+        </details>
+
+        <details>
+          <summary>Qual é o prazo para entrega das declarações?</summary>
+          <p>Os prazos variam de acordo com cada obrigação, mas manter a documentação organizada permite cumprirmos as entregas dentro dos prazos legais.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       FOOTER – Rodapé com links e informações
+       =================================================== -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Coluna 1: Sobre a empresa -->
+        <div>
+          <a href="index.html" class="footer-logo"><span>AFL</span> Contábil</a>
+          <p class="footer-descricao">
+            Escritório de contabilidade comprometido em oferecer 
+            soluções completas e personalizadas para empresas e 
+            pessoas físicas.
+          </p>
+          <!-- Ícones de redes sociais (adicione os links reais) -->
+          <div class="footer-redes">
+            <a href="#" aria-label="Instagram" class="footer-social-link">📷</a>
+            <a href="#" aria-label="LinkedIn" class="footer-social-link">💼</a>
+            <a href="#" aria-label="WhatsApp" class="footer-social-link">💬</a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Links rápidos -->
+        <div class="footer-coluna">
+          <h4>Empresa</h4>
+          <nav class="footer-links">
+            <a href="sobre.html">Sobre nós</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="blog.html">Blog</a>
+            <a href="contato.html">Contato</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 3: Serviços -->
+        <div class="footer-coluna">
+          <h4>Serviços</h4>
+          <nav class="footer-links">
+            <a href="servicos.html#contabilidade">Contabilidade</a>
+            <a href="servicos.html#imposto-renda">Imposto de Renda</a>
+            <a href="servicos.html#abertura">Abertura de Empresa</a>
+            <a href="servicos.html#dp">Dep. Pessoal</a>
+            <a href="servicos.html#planejamento">Planej. Tributário</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 4: Contato -->
+        <div class="footer-coluna">
+          <h4>Contato</h4>
+          <nav class="footer-links">
+            <!-- Substitua pelos dados reais da AFL -->
+            <a href="tel:+5511900000000">📞 (11) 9 0000-0000</a>
+            <a href="mailto:contato@aflcontabil.com.br">✉️ contato@aflcontabil.com.br</a>
+            <a href="#" class="footer-info-link">📍 São Paulo, SP</a>
+            <a href="#" class="footer-info-link">⏰ Seg–Sex: 9h às 18h</a>
+          </nav>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <span>© 2026 AFL – Accounting, Finances Lima. Todos os direitos reservados.</span>
+        <span>CNPJ: 00.000.000/0001-00</span><!-- Substitua pelo CNPJ real -->
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ===================================================
+       JAVASCRIPT – Funcionalidades interativas
+       =================================================== -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
