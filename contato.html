@@ -13,6 +13,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
@@ -95,7 +97,7 @@
           <input type="text" name="nome" placeholder="Nome completo" required>
           <input type="email" name="email" placeholder="E-mail" required>
           <input type="tel" name="telefone" placeholder="Telefone/WhatsApp">
-          <input type="text" name="empresa" placeholder="Empresa">
+          <input type="text" name="empresa" placeholder="Empresa/Nome Empresarial">
           <select name="servico">
             <option value="Contabilidade Empresarial">Contabilidade Empresarial</option>
             <option value="Imposto de Renda PF">Imposto de Renda PF</option>
@@ -139,7 +141,9 @@
           <p>Segunda a Sexta, 9h às 17h</p>
         </div>
 
-        <a href="https://wa.me/5511976798629" class="btn-primario btn-whatsapp">💬 Chamar no WhatsApp</a>
+        <a href="https://wa.me/5511976798629" class="btn-primario btn-whatsapp" target="_blank"> 
+          <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
 
         <div class="mapa-container">
           <iframe
@@ -166,25 +170,64 @@
       <h2 class="secao-titulo">Perguntas Frequentes</h2>
 
       <div class="faq-perguntas">
-        <details>
-          <summary>Quanto custa o serviço de contabilidade?</summary>
-          <p>O custo depende do porte da empresa, volume de operações e serviços contratados. Podemos apresentar uma proposta personalizada após análise do seu caso.</p>
-        </details>
+        <div class="faq-item">
+    <button class="faq-pergunta" type="button" aria-expanded="false">
+      <span>Quanto custa o serviço de contabilidade?</span>
+      <span class="faq-icone">+</span>
+    </button>
+    <div class="faq-resposta">
+      <div class="faq-resposta-inner">
+        <p>
+          O custo depende do porte da empresa, volume de operações
+          e serviços contratados. Podemos apresentar uma proposta
+          personalizada após análise do seu caso.
+        </p>
+      </div>
+    </div>
+  </div>
+        <div class="faq-item">
+    <button class="faq-pergunta" type="button" aria-expanded="false">
+      <span>Vocês atendem MEI e empresas de todos os portes?</span>
+      <span class="faq-icone">+</span>
+    </button>
+    <div class="faq-resposta">
+      <div class="faq-resposta-inner">
+        <p>
+          Sim, atendemos MEI, micro, pequenas, médias e grandes empresas, oferecendo serviços ajustados à complexidade e ao porte de cada cliente.
+        </p>
+      </div>
+    </div>
+  </div>
+          
+         <div class="faq-item">
+    <button class="faq-pergunta" type="button" aria-expanded="false">
+      <span>Como funciona o processo de abertura de empresa?</span>
+      <span class="faq-icone">+</span>
+    </button>
+    <div class="faq-resposta">
+      <div class="faq-resposta-inner">
+        <p>
+          Iniciamos com a definição do tipo societário e regime tributário, depois cuidamos do registro na Junta Comercial e das demais formalidades legais.
+        </p>
+      </div>
+    </div>
+  </div>
 
-        <details>
-          <summary>Vocês atendem MEI e empresas de todos os portes?</summary>
-          <p>Sim, atendemos MEI, micro, pequenas, médias e grandes empresas, oferecendo serviços ajustados à complexidade e ao porte de cada cliente.</p>
-        </details>
-
-        <details>
-          <summary>Como funciona o processo de abertura de empresa?</summary>
-          <p>Iniciamos com a definição do tipo societário e regime tributário, depois cuidamos do registro na Junta Comercial e das demais formalidades legais.</p>
-        </details>
-
-        <details>
-          <summary>Qual é o prazo para entrega das declarações?</summary>
-          <p>Os prazos variam de acordo com cada obrigação, mas manter a documentação organizada permite cumprirmos as entregas dentro dos prazos legais.</p>
-        </details>
+          <!-- <summary>Qual é o prazo para entrega das declarações?</summary>
+          <p>Os prazos variam de acordo com cada obrigação, mas manter a documentação organizada permite cumprirmos as entregas dentro dos prazos legais.</p> -->
+          <div class="faq-item">
+    <button class="faq-pergunta" type="button" aria-expanded="false">
+      <span>Qual é o prazo para entrega das declarações?</span>
+      <span class="faq-icone">+</span>
+    </button>
+    <div class="faq-resposta">
+      <div class="faq-resposta-inner">
+        <p>
+         Os prazos variam de acordo com cada obrigação, mas manter a documentação organizada permite cumprirmos as entregas dentro dos prazos legais.
+        </p>
+      </div>
+    </div>
+  </div>
       </div>
     </div>
   </section>
@@ -210,7 +253,7 @@
           <div class="footer-redes">
             <a href="#" aria-label="Instagram" class="footer-social-link">📷</a>
             <a href="#" aria-label="LinkedIn" class="footer-social-link">💼</a>
-            <a href="#" aria-label="WhatsApp" class="footer-social-link">💬</a>
+            <a href="#" aria-label="WhatsApp" class="footer-social-link"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 

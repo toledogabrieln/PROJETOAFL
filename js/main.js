@@ -253,3 +253,29 @@ function inicializarFiltroBlog() {
 /* ---------- 8. Interface pública para uso direto ---------- */
 window.validarFormulario = validarFormulario;
 window.filtrarBlog = filtrarBlog;
+
+// ------------------------------------
+  // FAQ com transição (accordion)
+  // ------------------------------------
+  const faqItens = document.querySelectorAll('.faq-item');
+
+  faqItens.forEach(function (item) {
+    const botao = item.querySelector('.faq-pergunta');
+
+    botao.addEventListener('click', function () {
+      const jaEstavaAberto = item.classList.contains('aberto');
+
+      // Fecha todos os outros itens (efeito acordeão clássico)
+      faqItens.forEach(function (outroItem) {
+        outroItem.classList.remove('aberto');
+        outroItem.querySelector('.faq-pergunta')
+          .setAttribute('aria-expanded', 'false');
+      });
+
+      // Abre o item clicado, se ele já não estava aberto
+      if (!jaEstavaAberto) {
+        item.classList.add('aberto');
+        botao.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });

@@ -4,6 +4,30 @@ a {
   text-decoration: none;
 }
 
+  .btn-primario i,
+  .btn-secundario i,
+  .btn-secundario-branco i {
+    margin-right: 6px;
+  }
+
+  /* Exceções: estes botões sempre têm texto branco,
+     independente da regra genérica de cor dos links */
+  .navbar-cta,
+  .navbar-cta:visited,
+  .navbar-cta:hover,
+  .btn-primario,
+  .btn-primario:visited,
+  .btn-primario:hover,
+  .btn-secundario-branco,
+  .btn-secundario-branco:visited {
+    color: #ffffff !important;
+  }
+
+  .btn-secundario-branco:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+
 a:visited {
   color: inherit;
 }
@@ -752,15 +776,75 @@ section {
   color: var(--cor-branco);
 }
 
-.secao-faq {
-  background-color: var(--cor-primaria-clara);
-}
+.secao-faq .faq-item {
+    border-bottom: 1px solid var(--cor-borda);
+  }
 
-.faq-perguntas {
-  display: grid;
-  gap: var(--esp-md);
-  margin-top: var(--esp-lg);
-}
+  .faq-pergunta {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-sm);
+    padding: 1.25rem 0.25rem;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+    cursor: pointer;
+    transition: color var(--transicao);
+  }
+
+  .faq-pergunta:hover {
+    color: var(--cor-acento);
+  }
+
+  .faq-icone {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--cor-acento-clara);
+    color: var(--cor-acento);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .faq-item.aberto .faq-icone {
+    transform: rotate(45deg);
+    background: var(--cor-acento);
+    color: #ffffff;
+  }
+
+  /* Técnica de animação suave usando grid-template-rows,
+     funciona sem precisar calcular altura via JavaScript */
+  .faq-resposta {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+  }
+
+  .faq-item.aberto .faq-resposta {
+    grid-template-rows: 1fr;
+  }
+
+  .faq-resposta-inner {
+    overflow: hidden;
+  }
+
+  .faq-resposta-inner p {
+    padding: 0 0.25rem 1.25rem;
+    color: var(--cor-texto-secundario);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
 
 .sobre-placeholder,
 .post-thumbnail-placeholder {
