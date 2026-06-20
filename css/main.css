@@ -223,6 +223,16 @@ section {
   transition: background-color var(--transicao);
 }
 
+.navbar-links > .navbar-cta {
+  display:none;
+}
+
+@media (max-width: 768px) {
+  .navbar-links > .navbar-cta {
+    display:block;
+    margin-top: 8px;
+  }
+}
 .navbar-cta:hover {
   background-color: var(--cor-acento-hover);
 }
@@ -718,7 +728,6 @@ section {
 }
 
 .secao-historia,
-.secao-equipe,
 .secao-servicos-detalhe {
   background-color: var(--cor-branco);
 }
@@ -1390,3 +1399,57 @@ section {
     text-align: center;
   }
 }
+
+.secao-equipe {
+    background-color: var(--cor-branco);
+    padding-block: 96px;
+  }
+
+  .equipe-destaque {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: var(--esp-xl);
+    align-items: center;
+  }
+
+  .equipe-foto-placeholder {
+    aspect-ratio: 1;
+    background-color: var(--cor-primaria-clara);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto-claro);
+    font-size: 0.9rem;
+  }
+
+  .equipe-cargo {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--cor-acento);
+    font-weight: 500;
+    margin-bottom: var(--esp-sm);
+  }
+
+  .equipe-texto p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: var(--esp-sm);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .equipe-destaque {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .equipe-foto-placeholder {
+      max-width: 280px;
+      margin-inline: auto;
+    }
+
+    .equipe-texto h2,
+    .equipe-texto .equipe-cargo {
+      text-align: center;
+    }
+  }
