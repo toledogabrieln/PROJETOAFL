@@ -279,3 +279,31 @@ window.filtrarBlog = filtrarBlog;
       }
     });
   });
+
+  // ------------------------------------
+// Aplica filtro de categoria vindo de outra página
+// (ex: clique em "Tributário (8)" na sidebar do post.html)
+// ------------------------------------
+function normalizar(texto) {
+  return texto
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '') // remove acentos
+    .trim();
+}
+
+const parametros = new URLSearchParams(window.location.search);
+const categoriaDaUrl = parametros.get('categoria');
+
+if (categoriaDaUrl) {
+  const botoesFiltro = document.querySelectorAll('.blog-filtros [data-filtro]');
+
+  botoesFiltro.forEach(function (botao) {
+    const textoBotao = normalizar(botao.textContent);
+    const categoriaBuscada = normalizar(categoriaDaUrl);
+
+    if (textoBotao === categoriaBuscada) {
+      botao.click(); // reaproveita a função de filtro que já existe
+    }
+  });
+}
