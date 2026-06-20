@@ -61,17 +61,17 @@
   <!-- ===================================================
        HERO DO ARTIGO – Destaque do conteúdo
        =================================================== -->
-  <section class="post-hero" style="background-color: #141414; min-height: 400px;">
-    <div class="container" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+  <section class="post-hero">
+    <div class="container">
       <ul class="breadcrumb">
         <li><a href="index.html">Início</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li>Tributário</li>
       </ul>
 
-      <span class="badge" style="background-color: var(--cor-acento); color: var(--cor-branco);">Tributário</span>
-      <h1 style="margin-top: 1rem; color: var(--cor-branco); font-size: clamp(2.5rem, 4vw, 4rem);">Simples Nacional, Lucro Presumido ou Real?</h1>
-      <p style="color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 640px;">
+      <span class="badge">Tributário</span>
+      <h1>Simples Nacional, Lucro Presumido ou Real?</h1>
+      <p>
         Por Ana Lima · 15 de Maio de 2026 · 5 min de leitura
       </p>
     </div>
@@ -81,13 +81,13 @@
   <!-- ===================================================
        LAYOUT DO ARTIGO – Conteúdo principal e sidebar
        =================================================== -->
-  <section class="post-layout" style="background-color: var(--cor-bg); padding-block: var(--esp-xl);">
-    <div class="container" style="display: grid; grid-template-columns: 70% 30%; gap: 48px; align-items: flex-start;">
+  <section class="post-layout">
+    <div class="container">
 
       <!-- Conteúdo principal -->
       <main class="post-conteudo">
-        <div class="post-imagem-capa" style="background-color: var(--cor-primaria-clara); border-radius: 3px; overflow: hidden; box-shadow: var(--sombra-card); margin-bottom: var(--esp-lg);">
-          <div style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; color: var(--cor-texto-claro); font-size: 1rem;">
+        <div class="post-imagem-capa">
+          <div>
             Imagem de capa do artigo
           </div>
         </div>
@@ -119,7 +119,7 @@
             Empresas com margens mais elevadas podem se beneficiar do Lucro Real, já que o recolhimento se baseia no resultado efetivo. Já pequenas empresas com faturamento reduzido recebem tratamento simplificado no Simples Nacional.
           </p>
 
-          <blockquote style="border-left: 3px solid var(--cor-acento); padding-left: 1rem; color: var(--cor-texto); margin: var(--esp-lg) 0;">
+          <blockquote class="post-blockquote">
             A escolha do regime tributário deve ser feita com base em cenários reais de faturamento e projeção de custos, sempre com apoio de uma assessoria contábil especializada.
           </blockquote>
 
@@ -128,25 +128,25 @@
           </p>
         </article>
 
-        <div class="post-autor" style="display: flex; align-items: center; gap: var(--esp-md); background-color: var(--cor-branco); padding: var(--esp-md); border-radius: var(--borda-raio-lg); box-shadow: var(--sombra-card); margin-top: var(--esp-xl);">
-          <div style="width: 64px; height: 64px; border-radius: 50%; background-color: var(--cor-primaria-clara); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; color: var(--cor-primaria);">
-            AL
-          </div>
-          <div>
-            <strong>Ana Lima</strong>
-            <p style="margin: 0.25rem 0 0; color: var(--cor-texto-claro);">Contadora Sênior · CRC/SP 000000</p>
-            <p style="margin-top: 0.75rem; font-size: 0.95rem; color: var(--cor-texto-secundario);">
-              Ana possui mais de 10 anos de experiência em planejamento tributário e assessoria contábil para empresas de todos os segmentos.
+        <div class="post-autor">
+          <div class="autor-avatar">SC</div>
+          <div class="autor-info">
+            <strong class="autor-nome">Sanny Christina</strong>
+            <span class="autor-cargo">Gestora · AFL – Accounting, Finances Lima</span>
+            <p class="autor-bio">
+              Especialista em contabilidade empresarial e planejamento tributário,
+              com experiência em atender empresas de diferentes portes e segmentos
+              com foco em soluções práticas e conformidade fiscal.
             </p>
           </div>
         </div>
 
-        <section class="posts-relacionados" style="margin-top: var(--esp-xl);">
+        <section class="posts-relacionados">
           <h3>Você também pode gostar</h3>
-          <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--esp-md); margin-top: var(--esp-md);">
+          <div class="posts-relacionados-grid">
 
-            <article class="post-card" style="background-color: var(--cor-branco);">
-              <div class="post-thumbnail" style="background-color: var(--cor-primaria-clara);">
+            <article class="post-card">
+              <div class="post-thumbnail">
                 <div class="post-thumbnail-placeholder">Imagem</div>
               </div>
               <div class="post-corpo">
@@ -155,8 +155,8 @@
               </div>
             </article>
 
-            <article class="post-card" style="background-color: var(--cor-branco);">
-              <div class="post-thumbnail" style="background-color: var(--cor-primaria-clara);">
+            <article class="post-card">
+              <div class="post-thumbnail">
                 <div class="post-thumbnail-placeholder">Imagem</div>
               </div>
               <div class="post-corpo">
@@ -165,8 +165,8 @@
               </div>
             </article>
 
-            <article class="post-card" style="background-color: var(--cor-branco);">
-              <div class="post-thumbnail" style="background-color: var(--cor-primaria-clara);">
+            <article class="post-card">
+              <div class="post-thumbnail">
                 <div class="post-thumbnail-placeholder">Imagem</div>
               </div>
               <div class="post-corpo">
@@ -180,9 +180,9 @@
       </main>
 
       <!-- Sidebar -->
-      <aside class="post-sidebar" style="display: grid; gap: var(--esp-lg);">
+<aside class="post-sidebar">
 
-        <div class="card-base" style="padding: var(--esp-lg);">
+        <div class="card-base">
           <h3>Sobre a AFL</h3>
           <p>
             Escritório de contabilidade com foco em soluções estratégicas e atendimento próximo para empresários e profissionais liberais.
@@ -190,9 +190,9 @@
           <a href="sobre.html" class="blog-link">Saiba mais sobre nós</a>
         </div>
 
-        <div class="card-base" style="padding: var(--esp-lg);">
+        <div class="card-base">
           <h3>Categorias</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem;">
+          <ul class="sidebar-list">
             <li>Tributário (8)</li>
             <li>IRPF / IRPJ (5)</li>
             <li>Gestão (6)</li>
@@ -201,22 +201,26 @@
           </ul>
         </div>
 
-        <div class="card-base" style="padding: var(--esp-lg);">
+        <div class="card-base">
           <h3>Posts recentes</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem;">
-            <li><a href="post.html">Como declarar investimentos no Imposto de Renda</a><br><small style="color: var(--cor-texto-claro);">12 Mai 2026</small></li>
-            <li><a href="post.html">Fluxo de caixa para pequenas empresas</a><br><small style="color: var(--cor-texto-claro);">08 Mai 2026</small></li>
-            <li><a href="post.html">O que mudou no IRPJ em 2026</a><br><small style="color: var(--cor-texto-claro);">03 Mai 2026</small></li>
-            <li><a href="post.html">Como escolher o melhor regime tributário</a><br><small style="color: var(--cor-texto-claro);">29 Abr 2026</small></li>
+          <ul class="sidebar-list">
+            <li><a href="post.html">Como declarar investimentos no Imposto de Renda</a><br><small>12 Mai 2026</small></li>
+            <li><a href="post.html">Fluxo de caixa para pequenas empresas</a><br><small>08 Mai 2026</small></li>
+            <li><a href="post.html">O que mudou no IRPJ em 2026</a><br><small>03 Mai 2026</small></li>
+            <li><a href="post.html">Como escolher o melhor regime tributário</a><br><small>29 Abr 2026</small></li>
           </ul>
         </div>
 
-        <div style="background-color: var(--cor-acento); color: var(--cor-branco); padding: var(--esp-lg); border-radius: var(--borda-raio-lg);">
-          <h3>Precisa de ajuda com sua contabilidade?</h3>
-          <p>
-            Converse com um especialista da AFL para encontrar a melhor solução fiscal para seu negócio.
+        <div class="sidebar-card sidebar-cta">
+          <div class="sidebar-cta-icone">💬</div>
+          <h4 class="sidebar-cta-titulo">Precisa de ajuda com sua contabilidade?</h4>
+          <p class="sidebar-cta-texto">
+            Converse com a Sanny Christina e encontre a melhor
+            solução fiscal para o seu negócio.
           </p>
-          <a href="contato.html" class="btn-secundario-branco" style="background-color: var(--cor-branco); color: var(--cor-primaria); display: inline-block; margin-top: var(--esp-sm);">Falar com Especialista</a>
+          <a href="contato.html" class="sidebar-cta-btn">
+            Falar com Especialista →
+          </a>
         </div>
 
       </aside>
@@ -275,11 +279,11 @@
         <div class="footer-coluna">
           <h4>Contato</h4>
           <nav class="footer-links">
-            <!-- Substitua pelos dados reais da AFL -->
-            <a href="tel:+5511900000000">📞 (11) 9 0000-0000</a>
-            <a href="mailto:contato@aflcontabil.com.br">✉️ contato@aflcontabil.com.br</a>
-            <a href="#" class="footer-info-link">📍 São Paulo, SP</a>
-            <a href="#" class="footer-info-link">⏰ Seg–Sex: 9h às 18h</a>
+            <a href="tel:+551122832539">📞 (11) 2283-2539</a>
+            <a href="tel:+551122832548">📞 (11) 2283-2548</a>
+            <a href="mailto:afl@aflcontabil.com.br">✉️ afl@aflcontabil.com.br</a>
+            <a href="#" class="footer-info-link">📍 Praça Ricardo Whately, 915 – Santana<br>São Paulo – SP · CEP 02019-050</a>
+            <a href="#" class="footer-info-link">⏰ Seg–Sex: 9h às 17h</a>
           </nav>
         </div>
 
@@ -288,7 +292,7 @@
       <!-- Copyright -->
       <div class="footer-bottom">
         <span>© 2026 AFL – Accounting, Finances Lima. Todos os direitos reservados.</span>
-        <span>CNPJ: 00.000.000/0001-00</span><!-- Substitua pelo CNPJ real -->
+        <span>CNPJ: 00.000.000/0001-00</span>
       </div>
 
     </div>

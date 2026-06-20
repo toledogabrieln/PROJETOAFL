@@ -81,22 +81,22 @@
   <!-- ===================================================
        SEÇÃO DE CONTATO – Formulário e informações
        =================================================== -->
-  <section class="secao-contato" style="background-color: var(--cor-bg); padding-block: 80px;">
-    <div class="container" style="display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: start;">
+  <section class="secao-contato">
+    <div class="container contato-grid">
 
       <div class="contato-form">
         <span class="secao-rotulo">Contato</span>
         <h2 class="secao-titulo">Solicite um orçamento ou tire suas dúvidas</h2>
 
-        <form action="https://formspree.io/f/SUBSTITUIR_AQUI" method="POST" id="form-contato">
-          <div class="mensagem-sucesso" style="display: none; background-color: #FDEAEA; border-left: 3px solid #C30000; padding: 16px; margin-bottom: 16px; color: var(--cor-texto);">
+        <form action="https://formspree.io/f/your-form-id" method="POST" id="form-contato">
+          <div class="mensagem-sucesso">
             ✓ Mensagem enviada com sucesso! Retornaremos em breve.
           </div>
-          <input type="text" name="nome" placeholder="Nome completo" required style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
-          <input type="email" name="email" placeholder="E-mail" required style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
-          <input type="tel" name="telefone" placeholder="Telefone/WhatsApp" style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
-          <input type="text" name="empresa" placeholder="Empresa" style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
-          <select name="servico" style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;">
+          <input type="text" name="nome" placeholder="Nome completo" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="tel" name="telefone" placeholder="Telefone/WhatsApp">
+          <input type="text" name="empresa" placeholder="Empresa">
+          <select name="servico">
             <option value="Contabilidade Empresarial">Contabilidade Empresarial</option>
             <option value="Imposto de Renda PF">Imposto de Renda PF</option>
             <option value="Imposto de Renda PJ">Imposto de Renda PJ</option>
@@ -106,43 +106,51 @@
             <option value="Consultoria Financeira">Consultoria Financeira</option>
             <option value="Outro">Outro</option>
           </select>
-          <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" required style="width: 100%; background-color: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 3px; padding: 12px; margin-bottom: 16px;"></textarea>
-          <button type="submit" class="btn-primario" style="width: 100%;">Enviar Mensagem</button>
+          <textarea name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+          <button type="submit" class="btn-primario">Enviar Mensagem</button>
         </form>
       </div>
 
-      <aside class="contato-info" style="display: grid; gap: var(--esp-md);">
-        <h3 style="font-family: var(--fonte-titulo);">Outras formas de contato</h3>
+      <aside class="contato-info">
+        <h3>Outras formas de contato</h3>
 
-        <div class="card-base" style="padding: var(--esp-md);">
-          <p style="font-weight: 600; margin-bottom: 0.5rem;">Telefone</p>
-          <p>(11) 9 0000-0000</p>
+        <div class="card-base">
+          <p><strong>Telefone</strong></p>
+          <p>(11) 2283-2539 · (11) 2283-2548</p>
         </div>
 
-        <div class="card-base" style="padding: var(--esp-md);">
-          <p style="font-weight: 600; margin-bottom: 0.5rem;">WhatsApp</p>
-          <p><a href="https://wa.me/5511900000000">(11) 9 0000-0000</a></p>
+        <div class="card-base">
+          <p><strong>WhatsApp</strong></p>
+          <p><a href="https://wa.me/5511976798629">(11) 97679-8629</a></p>
         </div>
 
-        <div class="card-base" style="padding: var(--esp-md);">
-          <p style="font-weight: 600; margin-bottom: 0.5rem;">E-mail</p>
-          <p>contato@aflcontabil.com.br</p>
+        <div class="card-base">
+          <p><strong>E-mail</strong></p>
+          <p>afl@aflcontabil.com.br</p>
         </div>
 
-        <div class="card-base" style="padding: var(--esp-md);">
-          <p style="font-weight: 600; margin-bottom: 0.5rem;">Endereço</p>
-          <p>São Paulo, SP</p>
+        <div class="card-base">
+          <p><strong>Endereço</strong></p>
+          <p>Praça Ricardo Whately, 915 – Santana<br>São Paulo – SP · CEP 02019-050</p>
         </div>
 
-        <div class="card-base" style="padding: var(--esp-md);">
-          <p style="font-weight: 600; margin-bottom: 0.5rem;">Horário</p>
-          <p>Segunda a Sexta, 9h às 18h</p>
+        <div class="card-base">
+          <p><strong>Horário</strong></p>
+          <p>Segunda a Sexta, 9h às 17h</p>
         </div>
 
-        <a href="https://wa.me/5511900000000" class="btn-primario" style="background-color: #25D366; border-radius: 3px; color: #FFFFFF; text-align: center; display: inline-block;">💬 Chamar no WhatsApp</a>
+        <a href="https://wa.me/5511976798629" class="btn-primario btn-whatsapp">💬 Chamar no WhatsApp</a>
 
-        <div style="background-color: #E8E8E6; border-radius: 3px; height: 200px; display: flex; align-items: center; justify-content: center; text-align: center; padding: var(--esp-md);">
-          Google Maps será adicionado aqui
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.0986635818754!2d-46.6343825516914!3d-23.492955484716898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef7cb205e37b1%3A0x4f900a722973c027!2sPra%C3%A7a+Ricardo+Whately%2C+915+-+Santana%2C+S%C3%A3o+Paulo+-+SP%2C+02019-050!5e0!3m2!1spt-BR!2sbr!4v1496327486357"
+            width="100%"
+            height="280"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localização da AFL Contábil – Praça Ricardo Whately, 915, Santana, São Paulo">
+          </iframe>
         </div>
       </aside>
     </div>
@@ -152,12 +160,12 @@
   <!-- ===================================================
        FAQ – Perguntas frequentes
        =================================================== -->
-  <section class="secao-faq" style="background-color: var(--cor-branco); padding-block: var(--esp-xl);">
+  <section class="secao-faq">
     <div class="container">
       <span class="secao-rotulo">FAQ</span>
       <h2 class="secao-titulo">Perguntas Frequentes</h2>
 
-      <div style="display: grid; gap: var(--esp-md); margin-top: var(--esp-lg);">
+      <div class="faq-perguntas">
         <details>
           <summary>Quanto custa o serviço de contabilidade?</summary>
           <p>O custo depende do porte da empresa, volume de operações e serviços contratados. Podemos apresentar uma proposta personalizada após análise do seu caso.</p>
@@ -233,11 +241,11 @@
         <div class="footer-coluna">
           <h4>Contato</h4>
           <nav class="footer-links">
-            <!-- Substitua pelos dados reais da AFL -->
-            <a href="tel:+5511900000000">📞 (11) 9 0000-0000</a>
-            <a href="mailto:contato@aflcontabil.com.br">✉️ contato@aflcontabil.com.br</a>
-            <a href="#" class="footer-info-link">📍 São Paulo, SP</a>
-            <a href="#" class="footer-info-link">⏰ Seg–Sex: 9h às 18h</a>
+            <a href="tel:+551122832539">📞 (11) 2283-2539</a>
+            <a href="tel:+551122832548">📞 (11) 2283-2548</a>
+            <a href="mailto:afl@aflcontabil.com.br">✉️ afl@aflcontabil.com.br</a>
+            <a href="#" class="footer-info-link">📍 Praça Ricardo Whately, 915 – Santana<br>São Paulo – SP · CEP 02019-050</a>
+            <a href="#" class="footer-info-link">⏰ Seg–Sex: 9h às 17h</a>
           </nav>
         </div>
 
@@ -246,7 +254,7 @@
       <!-- Copyright -->
       <div class="footer-bottom">
         <span>© 2026 AFL – Accounting, Finances Lima. Todos os direitos reservados.</span>
-        <span>CNPJ: 00.000.000/0001-00</span><!-- Substitua pelo CNPJ real -->
+        <span>CNPJ: 00.000.000/0001-00</span>
       </div>
 
     </div>
