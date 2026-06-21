@@ -1666,79 +1666,96 @@ span.badge {
     }
   }
 
-  /* =============================================
-   CORREÇÃO MOBILE — Páginas internas
-   Os grids abaixo só existem nas páginas internas
-   (sobre, serviços, blog, post, contato) e nunca tinham
-   recebido uma versão para telas pequenas.
-   ============================================= */
+ 
 @media (max-width: 768px) {
 
-  /* sobre.html — bloco "Nossa História" (imagem + texto) */
-  .secao-historia {
+  /* ============================================
+     CONTATO.HTML — formulário + informações
+     Classe real: .contato-grid
+     ============================================ */
+  .contato-grid {
     grid-template-columns: 1fr !important;
+    gap: var(--esp-lg) !important;
+  }
+
+  /* ============================================
+     POST.HTML — conteúdo + sidebar
+     Classe real: o grid fica em .post-layout .container
+     (uma camada mais profunda que .post-layout sozinho)
+     ============================================ */
+  .post-layout .container {
+    grid-template-columns: 1fr !important;
+    gap: var(--esp-lg) !important;
+  }
+
+  /* ============================================
+     SERVICOS.HTML — blocos alternados
+     Classe real: reaproveita .sobre-grid (já empilha sozinho!)
+     Só falta: reduzir o espaço grande e fixar a ordem
+     ============================================ */
+  .servico-bloco {
     gap: var(--esp-md) !important;
     text-align: center;
   }
 
-  /* sobre.html — Missão, Visão e Valores (3 cards) */
-  .secao-mvv .mvv-grid,
-  .secao-mvv > .container > div[style*="grid"],
-  .mvv-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  /* sobre.html — Diferenciais (4 itens) */
-  .secao-diferenciais .diferenciais-grid,
-  .diferenciais-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: var(--esp-sm) !important;
-  }
-
-  /* servicos.html — cada bloco de serviço (imagem + texto alternado) */
-  .servico-detalhe,
-  .secao-servicos-detalhe > .container > div[style*="grid"] {
-    grid-template-columns: 1fr !important;
-    text-align: center;
-  }
-
-  /* blog.html — barra de filtros de categoria */
-  .blog-filtros {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  /* post.html — conteúdo + sidebar (70/30) */
-  .post-layout {
-    grid-template-columns: 1fr !important;
-    gap: var(--esp-lg) !important;
-  }
-
-  /* post.html — sidebar passa a vir DEPOIS do conteúdo principal */
-  .post-sidebar {
+  /* Imagem sempre depois do texto, nunca antes —
+     independente da ordem alternada do desktop */
+  .servico-bloco .sobre-imagem {
     order: 2;
   }
 
-  .post-conteudo {
-    order: 1;
+  /* ============================================
+     BLOG.HTML — barra de filtros
+     Classe real: os botões ficam dentro de
+     .blog-filtros .container (não direto em .blog-filtros)
+     ============================================ */
+  .blog-filtros .container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px;
+    padding-block: 12px;
+    scrollbar-width: none;
   }
 
-  /* contato.html — formulário + informações (60/40) */
-  .secao-contato {
-    grid-template-columns: 1fr !important;
-    gap: var(--esp-lg) !important;
+  .blog-filtros .container::-webkit-scrollbar {
+    display: none;
   }
 
-  /* Segurança geral: nenhuma imagem ou mapa deve
-     ultrapassar a largura da tela em nenhuma página */
+  .blog-filtros .container button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* ============================================
+     BLOG.HTML — paginação
+     Classe real: .blog-paginacao (essa já estava certa)
+     ============================================ */
+  .blog-paginacao {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 4px;
+    padding-inline: 8px;
+  }
+
+  .blog-paginacao button {
+    flex: 1 1 auto;
+    padding: 4px 4px;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  /* Segurança geral */
   img, iframe {
     max-width: 100%;
   }
 
-  /* Segurança geral: impede rolagem horizontal indesejada
-     causada por qualquer elemento que ainda escape da tela */
   body {
     overflow-x: hidden;
   }
+
 }
