@@ -211,12 +211,18 @@ section {
   font-family: var(--fonte-titulo);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--cor-branco);
+  color:#ffffff;
   letter-spacing: 0.02em;
 }
 
+.navbar-logo,
+.navbar-logo:visited,
+.navbar-logo:hover {
+  color: #ffffff !important;
+}
+
 .navbar-logo span {
-  color: var(--cor-acento);
+  color: var(--cor-acento) !important;
 }
 
 .navbar-links {
@@ -257,6 +263,40 @@ section {
     margin-top: 8px;
   }
 }
+
+.whatsapp-flutuante {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  color: #ffffff !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.whatsapp-flutuante:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-flutuante {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+
 .navbar-cta:hover {
   background-color: var(--cor-acento-hover);
 }
@@ -921,9 +961,11 @@ section {
 }
 
 .post-hero {
-  background-color: #141414;
-  min-height: 400px;
-  padding-block: 96px;
+  background-color: var(--cor-primaria);
+  padding-top: 100px;
+  padding-bottom: 40px;
+  height: auto;
+  min-height: unset;
 }
 
 .post-hero .container {
@@ -1256,6 +1298,17 @@ section {
 
 .footer-logo span {
   color: var(--cor-acento);
+}
+
+span.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--borda-raio);
+  margin-left: 8px;
+  margin-right: -4px;
+  width: 12vh;
+  margin-top: 20px;
 }
 
 .footer-descricao {
@@ -1612,3 +1665,80 @@ section {
       text-align: center;
     }
   }
+
+  /* =============================================
+   CORREÇÃO MOBILE — Páginas internas
+   Os grids abaixo só existem nas páginas internas
+   (sobre, serviços, blog, post, contato) e nunca tinham
+   recebido uma versão para telas pequenas.
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* sobre.html — bloco "Nossa História" (imagem + texto) */
+  .secao-historia {
+    grid-template-columns: 1fr !important;
+    gap: var(--esp-md) !important;
+    text-align: center;
+  }
+
+  /* sobre.html — Missão, Visão e Valores (3 cards) */
+  .secao-mvv .mvv-grid,
+  .secao-mvv > .container > div[style*="grid"],
+  .mvv-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* sobre.html — Diferenciais (4 itens) */
+  .secao-diferenciais .diferenciais-grid,
+  .diferenciais-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--esp-sm) !important;
+  }
+
+  /* servicos.html — cada bloco de serviço (imagem + texto alternado) */
+  .servico-detalhe,
+  .secao-servicos-detalhe > .container > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+
+  /* blog.html — barra de filtros de categoria */
+  .blog-filtros {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* post.html — conteúdo + sidebar (70/30) */
+  .post-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--esp-lg) !important;
+  }
+
+  /* post.html — sidebar passa a vir DEPOIS do conteúdo principal */
+  .post-sidebar {
+    order: 2;
+  }
+
+  .post-conteudo {
+    order: 1;
+  }
+
+  /* contato.html — formulário + informações (60/40) */
+  .secao-contato {
+    grid-template-columns: 1fr !important;
+    gap: var(--esp-lg) !important;
+  }
+
+  /* Segurança geral: nenhuma imagem ou mapa deve
+     ultrapassar a largura da tela em nenhuma página */
+  img, iframe {
+    max-width: 100%;
+  }
+
+  /* Segurança geral: impede rolagem horizontal indesejada
+     causada por qualquer elemento que ainda escape da tela */
+  body {
+    overflow-x: hidden;
+  }
+}
