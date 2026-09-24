@@ -403,7 +403,7 @@ section {
 
 .hero-imagem img {
   width: 100%;
-  max-width: 480px;
+  max-width: 1920px;
   border-radius: var(--borda-raio-lg);
 }
 
@@ -1006,6 +1006,13 @@ section {
   overflow: hidden;
   box-shadow: var(--sombra-card);
   margin-bottom: var(--esp-lg);
+}
+
+.post-imagem-capa > img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
 }
 
 .post-imagem-capa > div {
@@ -1620,20 +1627,22 @@ span.badge {
 
   .equipe-destaque {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--esp-xl);
     align-items: center;
   }
 
   .equipe-foto-placeholder {
-    aspect-ratio: 1;
     background-color: var(--cor-primaria-clara);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cor-texto-claro);
-    font-size: 0.9rem;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .equipe-foto-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+    display: block;
   }
 
   .equipe-cargo {
@@ -1657,8 +1666,14 @@ span.badge {
     }
 
     .equipe-foto-placeholder {
+      aspect-ratio: 1;
       max-width: 280px;
       margin-inline: auto;
+    }
+
+    .equipe-foto-placeholder img {
+      height: 100%;
+      object-fit: cover;
     }
 
     .equipe-texto h2,
@@ -1699,10 +1714,13 @@ span.badge {
     text-align: center;
   }
 
-  /* Imagem sempre depois do texto, nunca antes —
-     independente da ordem alternada do desktop */
+  /* Mantém a imagem antes do texto em todos os serviços no mobile. */
   .servico-bloco .sobre-imagem {
-    order: 2;
+    order: 0;
+  }
+
+  .servico-bloco > div:not(.sobre-imagem) {
+    order: 1;
   }
 
   /* ============================================
@@ -1729,6 +1747,7 @@ span.badge {
     white-space: nowrap;
     padding: 8px 16px;
     font-size: 0.85rem;
+    width: auto;
   }
 
   /* ============================================
@@ -1748,6 +1767,7 @@ span.badge {
     padding: 4px 4px;
     font-size: 0.78rem;
     text-align: center;
+    width: auto;
   }
 
   /* Segurança geral */
@@ -1757,10 +1777,6 @@ span.badge {
 
   body {
     overflow-x: hidden;
-  }
-
-  .badge {
-
   }
 
 }
